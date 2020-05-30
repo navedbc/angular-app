@@ -1,5 +1,9 @@
+
+<div class="alert alert-primary" *ngIf="cart.length===0" >Cart is Empty</div>
+
 <ul class="list-group">
-  <li class="list-group-item" *ngFor="let item of [1,2,3,4,5,6]" >
-    <app-cart-item></app-cart-item>
+  <li class="list-group-item" *ngFor="let item of cart" >
+    <app-cart-item [cartItem]="item"></app-cart-item>
   </li>
 </ul>
+
