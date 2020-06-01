@@ -1,9 +1,12 @@
 
-<div class="alert alert-primary" *ngIf="cart.length===0" >Cart is Empty</div>
 
+<div class="alert alert-warning" *ngIf="tart.length===0; else thenblock" >No Items Added To Cart</div>
+
+<ng-template #thenblock>
 <ul class="list-group">
   <li class="list-group-item" *ngFor="let item of cart" >
     <app-cart-item [cartItem]="item"></app-cart-item>
   </li>
 </ul>
+</ng-template>
 

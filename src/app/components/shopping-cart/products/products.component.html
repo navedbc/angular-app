@@ -1,4 +1,4 @@
 <div class="row">
-  <div class="col-md-4" *ngFor="let item of [1,2,3,4,5,6,7]" >
-  <app-product-item></app-product-item>
+  <div class="col-md-4" *ngFor="let item of products" >
+  <app-product-item [productItem]="item"></app-product-item>
   </div>
